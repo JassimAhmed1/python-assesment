@@ -1,0 +1,153 @@
+# Assessment : 3
+
+
+
+
+#q2
+
+
+    
+#q3
+
+user_string = input("Enter a sentence: ")
+
+
+vowels = "aeiouAEIOU"
+vowel_count = 0
+
+for i in user_string:
+    if i in vowels:
+        vowel_count += 1  
+
+print(f"Number of vowels: {vowel_count}")
+
+
+#4
+
+numbers = [12, 3, 4, 6, 7, 8, 9,]
+
+evenList = []
+oddList = []
+
+for num in numbers:
+    if num % 2 == 0:
+        evenList.append(num)
+    else:
+        oddList.append(num)
+
+print(evenList)
+print(oddList)
+
+#q5
+
+numbers = [15, 42, 7, 89, 23, 64, 89, 11]
+largest_num = numbers[0]
+
+for num in numbers:
+
+    if num > largest_num:
+        largest_num = num
+
+print("The biggest number is:", largest_num)
+
+#q6
+print("Welcome to the Password Strength checker")
+
+password = input("Enter your password")
+score = 0
+
+
+if len(password) >= 12:
+    score += 2
+elif len(password) >=8:
+    score += 1
+
+    
+
+if any(cap.isupper() for cap in password):  #any() is a inbuilt function that helps us check if atleast one uppercase is found in the password
+    score += 2
+    print("Uppercase found")                
+else:
+    print("Uppercase not found")
+ 
+
+if any(digit.isdigit() for digit in password):
+    print("digit found")
+    score += 2
+else:
+    print("digit not found")
+         
+
+if any(low.islower() for low in password):
+    print("lowercase found")
+    score += 2
+else:
+    print("lowercase not found")
+    
+special_characters = "!@#$%^&*()-_=+[]{}|;:',.<>?/~`¬~"
+
+if any(cap in special_characters for cap in password):
+    score += 2
+    print("Special character found")
+else:
+    print("Special charcter not found")
+        
+
+if score >=9:
+    print("password stength strong")
+elif score >=8:
+    print("password strength medium")
+else:
+    print("invalid")
+    
+#q7
+
+registered = {"asha", "rahul", "john", "meera", "ali", "sara"}
+attended = {"asha", "john", "meera", "ali"}
+
+
+num_registered = len(registered)
+num_attended = len(attended)
+did_not_attend = registered - attended
+attendance_percentage = (num_attended / num_registered) * 100
+
+
+print(f"Number of registered participants: {num_registered}")
+print(f"Number of attendees: {num_attended}")
+print(f"Registered but did not attend: {did_not_attend}")
+print(f"Attendance percentage: {attendance_percentage:.2f}%")
+
+#q8
+
+menu = ["laptop:£55000", "phone:£30000", "headphones:£2500","keyboard:£1500",]
+print(menu)
+laptop1 = 55000
+phone1 = 30000
+headphones1 = 2500
+keyboard1 = 1500
+laptop = int(input("enter the number of laptop"))
+phone = int(input("enter the number of phone"))
+headphones = int(input("enter the number of headphones"))
+keyboard = int(input("enter the number of keyboard"))
+
+
+total = laptop*laptop1+phone*phone1+headphones*headphones1+keyboard*keyboard1
+
+bill10 = 30000
+bill5 = 10000
+
+if total >=bill10:
+    total*0.10 
+    
+elif total >=bill5:
+    total*0.05
+else:
+    print("no discount")
+    
+discount10 = total*0.10
+discount5 = total*0.05
+
+print(f"Final Amount:  £{total-bill10-bill5}")
+print(f"discount of 10 percent {discount10}")
+print(f"discount of 5 percent {discount5}")
+
