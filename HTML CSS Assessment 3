@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter full name:">
+    <input type="text" placeholder="enter email:">
+    <input type="text" placeholder="enter phone number:">
+    <input type="text" placeholder="enter date of birth:">
+
+    <!-- 1. GENDER (Radio Buttons) -->
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label>
+
+
+
+<select id="course" name="course">
+  <option value="computer_science">Computer Science</option>
+  <option value="information_technology">Information Technology</option>
+  <option value="business_management">Business Management</option>
+</select>
+
+
+<input type="checkbox" id="html" name="skills" value="html">
+<label for="html">HTML</label>
+
+<input type="checkbox" id="css" name="skills" value="css">
+<label for="css">CSS</label>
+
+<input type="checkbox" id="javascript" name="skills" value="javascript">
+<label for="javascript">JavaScript</label>
+
+<textarea id="address" name="address" rows="4" cols="50"></textarea>
+
+</body>
+</html>
